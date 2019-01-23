@@ -21,7 +21,12 @@ Module.register("MMM-Hotword", {
         sensitivity: '0.8,0.80',
         hotwords: ['jarvis','jarvis'] //Kitt.ai changed their Jarvis UMDL, it has 2 models in one file. So weird.
         //anyway, you can give different name for each. ['jarvis_1', 'jarvis_2']. Even though I think this is useless.
-      }
+      },
+      {
+        hotwords: "okgoogle", //this will be sended to other module for distinguishing which hotword is detected.
+        file: "resources/models/okgoogle.pmdl",
+        sensitivity: '0.5',
+      },
     ],
     record: {
       sampleRate    : 16000,      // audio sample rate
